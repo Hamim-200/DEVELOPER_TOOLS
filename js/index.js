@@ -9,6 +9,7 @@ const cardData = [
     { icon: 'fa-regular fa-pen-nib', title: 'Code Editors', link: 'code_editors.html' },
     { icon: 'fa-folder-open', title: 'Learning Resources', link: 'learning_resources.html' },
     { icon: 'fa-gears', title: 'VS code extention', link: 'vs_extention.html' },
+    { icon: 'fa-tools', title: 'Tools', link: 'tools.html' },
 ];
 
 const container = document.getElementById('cards-container');

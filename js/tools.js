@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const isLearningResourcesPage = document.title.includes("Learning Resources");
     const isVsCodeextentionPage = document.title.includes("VS Code Extention");
     const isColorPage = document.title.includes("Color");
+    const isToolsPage = document.title.includes("Tools");
     
     // Filter resources
     const filteredResources = resources.filter(resource => 
@@ -25,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
         isLearningResourcesPage ? resource.type === 'LearningResources' : 
         isVsCodeextentionPage ? resource.type === 'VsCodeExtention' : 
         isColorPage ? resource.type === 'color' : 
+        isToolsPage ? resource.type === 'tools' : 
         false
     );
 
@@ -38,9 +40,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 <h2>${resource.title}</h2>
                 <p>${resource.description}</p>
             </div>
-            <button>
-                <a href="${resource.link}" target="_blank">GO</a>
-            </button>
+      
+            <a href="${resource.link}" target="_blank" class="link-button">GO</a>
         `;
         container.appendChild(item);
     });
